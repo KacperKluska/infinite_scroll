@@ -13,3 +13,8 @@ export interface RocketLaunchData {
 export interface RocketData {
   rocket_name: string;
 }
+
+export interface RocketLaunchQueryVariables {
+  offset: number;
+  limit: number;
+}

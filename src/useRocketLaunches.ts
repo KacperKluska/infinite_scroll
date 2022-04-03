@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client";
 import { useEffect, useState } from "react";
 import {
   RocketLaunchData,
+  RocketLaunchQueryVariables,
   RocketLaunchResponse,
 } from "./interfaces/interfaces";
 import { GET_ROCKET_LAUNCHES } from "./rocketLaunchQuery";
@@ -12,15 +13,15 @@ export const useRocketLaunches = () => {
   const [items, setItems] = useState<RocketLaunchData[]>([]);
   const [hasMore, setHasMore] = useState<boolean>(true);
 
-  const { data, loading, fetchMore } = useQuery<RocketLaunchResponse>(
-    GET_ROCKET_LAUNCHES,
-    {
-      variables: {
-        offset: 0,
-        limit: DATA_LIMIT,
-      },
-    }
-  );
+  const { data, loading, fetchMore } = useQuery<
+    RocketLaunchResponse,
+    RocketLaunchQueryVariables
+  >(GET_ROCKET_LAUNCHES, {
+    variables: {
+      offset: 0,
+      limit: DATA_LIMIT,
+    },
+  });
 
   useEffect(() => {
     setItems(data?.launchesPast ?? []);
