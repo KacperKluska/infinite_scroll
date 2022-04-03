@@ -28,6 +28,7 @@ const StyledDescription = styled.div`
 export const NavItem = ({ item }: Props) => {
   return (
     <StyledItem>
+      <div>Mission id: {item.id}</div>
       <div>Mission name: {item.mission_name}</div>
       <div>Rocket name: {item.rocket.rocket_name}</div>
       <div>Launch year: {item.launch_year}</div>
