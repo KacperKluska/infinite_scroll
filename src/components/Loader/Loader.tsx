@@ -17,10 +17,10 @@ export const Loader = () => {
   return (
     <StyledLoader>
       <div className="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div />
+        <div />
+        <div />
+        <div />
       </div>
       <span>Loading</span>
     </StyledLoader>
