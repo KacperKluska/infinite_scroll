@@ -1,3 +1,8 @@
+# Installation
+
+Clone the project to your local repository. Type `npm i` to install all libraries. Type `npm run start` to run this app.\
+App will be running on `localhost` on port `3000` by default
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
